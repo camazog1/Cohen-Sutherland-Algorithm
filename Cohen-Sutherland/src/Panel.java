@@ -38,6 +38,8 @@ public class Panel extends JPanel implements MouseListener {
         this.paintArea(g2d);
 
         if (linea != null) {
+            g2d.setColor(Color.RED);
+            g2d.drawLine((int) linea.x1, (int) linea.y1, (int) linea.x2, (int) linea.y2);
             clippingAlgorithm(g2d, linea);
         }
     }
